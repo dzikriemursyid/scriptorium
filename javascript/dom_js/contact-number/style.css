@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+.header {
+  text-align: center;
+  margin: 10px;
+  color: whitesmoke;
+  font: bold 30px/2em "Open Sans", sans-serif;
+}
+.card {
+  background-color: #232d3f;
+  color: whitesmoke;
+  margin: 10px auto;
+  padding: 5px 6px;
+  max-width: 280px;
+  border: solid 1px #232d3f;
+  border-radius: 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.card:hover {
+  .close {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 100%;
+  }
+  border-color: gray;
+}
+.card img {
+  max-width: 60px;
+  border-radius: 50%;
+}
+
+.info {
+  flex-grow: 2;
+  margin: 10px;
+  text-align: left;
+}
+
+.info:hover {
+  cursor: default;
+}
+
+.name {
+  font: bold 16px/1.5em "Open Sans", sans-serif;
+}
+
+.phone {
+  font: 14px/1em "Open Sans", sans-serif;
+}
+
+.close {
+  opacity: 0%;
+  flex-grow: 1;
+}
+
+.close:hover {
+  color: red;
+  cursor: pointer;
+}

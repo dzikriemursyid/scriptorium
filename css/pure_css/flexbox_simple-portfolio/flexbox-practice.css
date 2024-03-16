@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #40A2E3;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+/* Section 1 */
+
+.container-one {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #FFF6E9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-one {
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-two {
+    order: 3;
+    flex: 1;
+}
+
+/* End of section 1 */
+
+/* Section 2 */
+.container-two {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.service {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.service.one {
+    background-color: #BBE2EC;
+}
+
+.service.two {
+    background-color: #FFF6E9;
+}
+
+.service.three {
+    background-color: #0D9276;
+}
+/* End of section 2 */
+
+/* Section 3 */
+    .container-three {
+        max-width: 800px;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .thumbnail {
+        width: 50%;
+    }
+
+    .thumbnail img{
+        width: 100%;
+    }
+/* End of section 3 */
+
+/* Section 4 */
+.container-four {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.card {
+    max-width: 600px;
+    border: 1px solid #C5FFF8;
+    border-radius: 10px;
+    background-color: #C5FFF8;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card .header {
+    height: 150px;
+    background-color: #5FBDFF;
+}
+
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* End of section 4 */
+
+/* Section 5 */
+.container-five {
+    height: 500px;
+    max-width: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: #5FBDFF;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.box span {
+    margin: auto;
+}
+/* End of section 5 */
+
+/* Responsive */
+
+@media( min-width: 600px ) {
+    .container-one {
+        display: flex;
+    }
+
+    .container-two {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service {
+        width: 30%;
+    }
+
+    .thumbnail {
+        width: 25%;
+    }
+
+    .container-four {
+        display: flex;
+    }
+    
+    .card {
+        flex: 1;
+    }
+
+    .card.big {
+        transform: scale(1.12);
+    }
+}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 480px;
+  margin: 10px auto;
+  border: 2px solid #ccc;
+  text-align: center;
+}
+.scoreBoard {
+  display: flex;
+  justify-content: space-around;
+}
+.maxScoreOpt h4 {
+  margin-top: 10px;
+}
+.maxScoreOpt select {
+  margin: 5px;
+}
+.buttonScore {
+  display: flex;
+  justify-content: space-around;
+}
+.buttonScore a {
+  text-decoration: none;
+}

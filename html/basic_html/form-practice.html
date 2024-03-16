@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practice</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Form Pesanan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form action="checkbox-practice.html" method="post">
+                <tr>
+                    <td><Label for="" id="name"> Nama Lengkap</Label></td>
+                    <td><input type="text" id="name" placeholder="Nama Lengkap" name="name" required minlength="3" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td><label for="" id="phone">Telepon</label></td>
+                    <td><input type="number" id="phone" placeholder="Telepon" name="phone" required minlength="11" maxlength="12"></td>
+                </tr>
+                <tr>
+                    <td><label for="" id="email">Email</label></td>
+                    <td><input type="email" id="email" placeholder="Email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="" id="password">Password</label></td>
+                    <td><input type="password" id="password" placeholder="Password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+</body>
+</html>
