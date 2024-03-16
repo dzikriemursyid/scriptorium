@@ -1,4 +1,4 @@
-![Go infinity and beyond! ](assets/banner/jpeg)
+![Go infinity and beyond! ](assets/banner/space1.jpg)
 
 # Scriptorium: My Programming Sanctuary
 
