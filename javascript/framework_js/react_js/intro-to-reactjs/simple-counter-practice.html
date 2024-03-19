@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      #root {
+        text-align: center;
+      }
+      .btnContainer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .displayNum {
+        margin: 0 10px;
+        padding: 10px 20px;
+        font: bold 20px Arial, sans-serif;
+      }
+      .resetBtn {
+        margin: 10px 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #868686;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      .resetBtn:hover {
+        background-color: #505050;
+        cursor: pointer;
+      }
+      .plsBtn {
+        margin: 10px 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .plsBtn:hover {
+        background-color: #0056b3;
+      }
+      .minBtn {
+        margin: 10px 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .minBtn:hover {
+        background-color: #b30000;
+      }
+      .disabledBtn {
+        margin: 10px 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #868686;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      .displayNum {
+        margin: 0 10px;
+        font: bold 20px Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function MyButton() {
+        const [Count, setCount] = React.useState(0);
+        const [DisabledBtn, setDisabledBtn] = React.useState(false);
+
+        function Minus() {
+          setCount(Count - 1);
+        }
+
+        function Plus() {
+          setCount(Count + 1);
+        }
+
+        function Reset() {
+          setCount(0);
+        }
+
+        function MinBtn() {
+          return (
+            <button className="minBtn" onClick={Minus} disabled={Count <= 0 || Count === 10}>
+              -
+            </button>
+          );
+        }
+
+        function DisabledMinBtn() {
+          return (
+            <button className="disabledBtn" onClick={Minus} disabled={Count <= 0 || Count === 10}>
+              -
+            </button>
+          );
+        }
+
+        function ResetBtn() {
+          return (
+            <button className="resetBtn" onClick={Reset} disabled={Count !== 10}>
+              Reset!
+            </button>
+          );
+        }
+
+        function DisabledResetBtn() {
+          return (
+            <button className="disabledBtn" onClick={Reset} disabled={Count !== 10}>
+              Reset!
+            </button>
+          );
+        }
+
+        function PlsBtn() {
+          return (
+            <button className="plsBtn" onClick={Plus} disabled={Count >= 10 || Count === 10}>
+              +
+            </button>
+          );
+        }
+
+        function DisabledPlsBtn() {
+          return (
+            <button className="disabledBtn" onClick={Plus} disabled={Count >= 10 || Count === 10}>
+              +
+            </button>
+          );
+        }
+        return (
+          <section className="btnContainer">
+            {DisabledBtn === (Count === 10) && DisabledBtn === (Count === 0) ? <MinBtn /> : <DisabledMinBtn />}
+            <div>
+              <h2 className="displayNum">{Count}</h2>
+              {DisabledBtn !== (Count === 10) ? <ResetBtn /> : <DisabledResetBtn />}
+            </div>
+            {DisabledBtn === (Count === 10) ? <PlsBtn /> : <DisabledPlsBtn />}
+          </section>
+        );
+
+        function Minus() {
+          setCount(Count - 1);
+        }
+
+        function Reset() {
+          setCount(0);
+        }
+
+        return (
+          <section className="btnContainer">
+            <button className="minBtn" onClick={Minus}>
+              -
+            </button>
+            <div>
+              <h2 className="displayNum">{Count}</h2>
+              <button className="resetBtn" onClick={Reset}>
+                Reset!
+              </button>
+            </div>
+            <button className="plsBtn" onClick={Plus}>
+              +
+            </button>
+          </section>
+        );
+      }
+
+      function MyApp() {
+        return (
+          <>
+            <h1>Button practice</h1>
+            <MyButton />
+          </>
+        );
+      }
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+    </script>
+  </body>
+</html>

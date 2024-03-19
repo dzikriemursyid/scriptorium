@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      #root {
+        text-align: center;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #0056b3;
+      }
+      .avatar {
+        border-radius: 50%;
+      }
+      .parBot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // Border
+      const user = {
+        name: "Dzikrie Mursyid",
+        age: 22,
+        email: "dzikrie@mail.com",
+        avatar: "img/Dzikri Mursyid.jpeg",
+        imgSize: 150,
+      };
+
+      function LearnReact() {
+        return (
+          <>
+            <p className="parBot">
+              Congrats! You can learn <img className="icon" src="img/react-js.png" /> now!
+            </p>
+          </>
+        );
+      }
+
+      function LearnBefore() {
+        return (
+          <>
+            <p className="parBot">
+              Unfortunately! You must learn <img className="icon" src="img/javascript.png" /> first!
+            </p>
+          </>
+        );
+      }
+
+      function LangContent(props) {
+        const buttonClicked = props.buttonClicked;
+        const showLangContent = props.showLangContent;
+
+        return buttonClicked ? showLangContent ? <LearnReact /> : <LearnBefore /> : null;
+      }
+
+      function MyButton(props) {
+        const handleButtonClick = props.handleButtonClick;
+
+        return (
+          <button className="btn" onClick={handleButtonClick}>
+            Click me!
+          </button>
+        );
+      }
+
+      function MyProfile() {
+        return (
+          <div className="profile">
+            <img
+              className="avatar"
+              src={user.avatar}
+              alt={"Photo of " + user.name}
+              style={{
+                width: user.imgSize,
+                height: user.imgSize,
+              }}
+            />
+            <h1>Hello, I'm {user.name}</h1>
+          </div>
+        );
+      }
+
+      function MyApp() {
+        const [buttonClicked, setButtonClicked] = React.useState(false);
+        const [showLangContent, setShowLangContent] = React.useState(false);
+
+        const handleButtonClick = () => {
+          const answer = prompt("Have you learned JavaScript before? (yes/no)");
+          const showContent = answer.toLowerCase() === "yes";
+          setButtonClicked(true);
+          setShowLangContent(showContent);
+        };
+
+        return (
+          <div>
+            <MyProfile />
+            <h2>Welcome to my first React.js app</h2>
+            <p>Click the button and answer the question to know your roadmap before learning React.js!</p>
+            <MyButton handleButtonClick={handleButtonClick} />
+            <LangContent buttonClicked={buttonClicked} showLangContent={showLangContent} />
+          </div>
+        );
+      }
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+
+      root.render(<MyApp />);
+    </script>
+  </body>
+</html>
