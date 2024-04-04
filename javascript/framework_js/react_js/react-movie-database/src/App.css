@@ -6,12 +6,7 @@
   text-align: center;
 }
 
-.popular-movies {
-  overflow: scroll;
-  display: flex;
-}
-
-.nowplaying-movies {
+.movies-container {
   overflow: scroll;
   display: flex;
 }

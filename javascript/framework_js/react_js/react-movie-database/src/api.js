@@ -13,7 +13,7 @@ export const getTopRatedMovies = async () => {
   return response.data.results;
 };
 
-export const searchMovies = async (query) => {
-  const response = await axios.get(`${baseUrl}/search/movie?api_key=${apiKey}&query=${query}&language=en-US&page=1`);
+export const searchMovies = async (e) => {
+  const response = await axios.get(`${baseUrl}/search/movie?api_key=${apiKey}&query=${e}&language=en-US&page=1`);
   return response.data.results;
 };

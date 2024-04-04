@@ -1,4 +1,4 @@
-export default function InputBox() {
+export default function InputBox({ target }) {
   return (
     <div className="container">
       <style>
@@ -54,7 +54,7 @@ export default function InputBox() {
               }
             `}
       </style>
-      <input type="text" name="text" className="input" placeholder="Search Movies" />
+      <input type="text" name="text" className="input" placeholder="Search Movies" onChange={target} />
       <button className="search__btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
           <path
