@@ -1,4 +1,4 @@
-export default function MovieCard({ image, title, date }) {
+const MovieCard = ({ image, title, date }) => {
   return (
     <div className="card-content">
       <style>
@@ -36,4 +36,6 @@ export default function MovieCard({ image, title, date }) {
       </div>
     </div>
   );
-}
+};
+
+export default MovieCard;

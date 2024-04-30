@@ -1,9 +1,9 @@
-export default function InputBox({ target }) {
+const InputBox = ({ target }) => {
   return (
-    <div className="container">
+    <div className="input-container">
       <style>
         {`
-            .container {
+            .input-container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -65,4 +65,6 @@ export default function InputBox({ target }) {
       </button>
     </div>
   );
-}
+};
+
+export default InputBox;

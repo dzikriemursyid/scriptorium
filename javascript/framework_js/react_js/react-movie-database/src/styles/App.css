@@ -1,0 +1,10 @@
+#root {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+}

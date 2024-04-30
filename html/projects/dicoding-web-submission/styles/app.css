@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal clamp(12px, 1.8vw, 28px) / 1.5em "Ubuntu", sans-serif;
+}
+header {
+  width: 100vw;
+}
+main {
+  margin: 3em 0;
+  max-width: 100vw;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+.main-content-heading-2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  height: 15%;
+  display: flex;
+  align-items: center;
+}
+.main-content-1 {
+  width: 75%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.card-container {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.card-wrapper {
+  width: 16vmax;
+  max-height: 10.5vmax;
+  position: relative;
+  flex-grow: 1;
+}
+.card-wrapper::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card .img-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+.card .img-content img {
+  width: 100%;
+}
+.card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e8e8e8;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -ms-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card .content .heading {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+.card:hover .img-content {
+  scale: 1.1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.main-content-2 {
+  width: 75%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.grid-gallery {
+  display: grid;
+  grid-template-rows: repeat(4, 8em);
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-auto-flow: dense; */
+  gap: 1em;
+}
+.img-landscape {
+  grid-column-end: span 2;
+}
+.img-square-lg {
+  grid-row-end: span 2;
+  grid-column-end: span 2;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.card-img {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: black;
+  font-weight: bold;
+}
+.card-img > img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card-details > p {
+  font-size: 0.6em;
+  margin-top: 0.5em;
+}
+.card-details > label {
+  font-weight: bold;
+}
+.card-details {
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 2.6em;
+  padding: 0.7em;
+  overflow: hidden;
+  transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -ms-transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card-image:hover > .card-details {
+  height: 5.5em;
+}
