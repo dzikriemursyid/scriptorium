@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dicoding Web Submission</title>
+    <title>Wonderful Indonesia</title>
+    <link rel="icon" type="image/png" href="/assets/icons/icon.png" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/slider.css" />
+    <link rel="stylesheet" href="styles/main-content.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/app.css" />
   </head>
   <body>
@@ -13,56 +16,71 @@
       <nav class="navbar">
         <img class="icon-logo" src="assets/icons/logo.png" alt="" />
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About Me</a></li>
-          <li><a href="#">Articles on HTML5 & CSS3</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#mc-1">Popular</a></li>
+          <li><a href="#mc-2">Gallery</a></li>
+          <li><a href="#mc-3">Guide</a></li>
+          <li><a href="#footer">Contact Us</a></li>
         </ul>
       </nav>
       <div class="slider">
-        <div class="list">
-          <div class="item">
-            <div class="info">
-              <h2>Pantai Nihiwatu</h2>
-              <p>Sumba, NTT.</p>
+        <div class="slider-list">
+          <div class="slider-item">
+            <div class="slider-info">
+              <h2>Pianemo Island</h2>
+              <p>Raja Ampat</p>
+              <a href="/pages/pianemo-island.html" target="_blank">
+                <button>Visit Now</button>
+              </a>
             </div>
-            <img src="assets/images/img-1.jpg" alt="" />
+            <img src="assets/images/pianemo-island.jpg" alt="" />
           </div>
-          <div class="item">
-            <div class="info">
-              <h2>Pantai Nihiwatu</h2>
-              <p>Sumba, NTT.</p>
+          <div class="slider-item">
+            <div class="slider-info">
+              <h2>Sumba Island</h2>
+              <p>East Nusa Tenggara</p>
+              <a href="/pages/sumba-island.html" target="_blank">
+                <button>Visit Now</button>
+              </a>
             </div>
-            <img src="assets/images/img-2.jpg" alt="" />
+            <img src="assets/images/sumba-island.jpg" alt="" />
           </div>
-          <div class="item">
-            <div class="info">
-              <h2>Pantai Nihiwatu</h2>
-              <p>Sumba, NTT.</p>
+          <div class="slider-item">
+            <div class="slider-info">
+              <h2>Tumpak Sewu Waterfall</h2>
+              <p>East Java</p>
+              <a href="/pages/tumpak-sewu-waterfall.html" target="_blank">
+                <button>Visit Now</button>
+              </a>
             </div>
-            <img src="assets//images/img-1.jpg" alt="" />
+            <img src="assets//images/tumpak-sewu-waterfall.jpg" alt="" />
           </div>
-          <div class="item">
-            <div class="info">
-              <h2>Pantai Nihiwatu</h2>
-              <p>Sumba, NTT.</p>
+          <div class="slider-item">
+            <div class="slider-info">
+              <h2>Togean Island</h2>
+              <p>Central Sulawesi</p>
+              <a href="/pages/togean-island.html" target="_blank">
+                <button>Visit Now</button>
+              </a>
             </div>
-            <img src="assets/images/img-2.jpg" alt="" />
+            <img src="assets/images/togean-island.jpg" alt="" />
           </div>
-          <div class="item">
-            <div class="info">
-              <h2>Pantai Nihiwatu</h2>
-              <p>Sumba, NTT.</p>
+          <div class="slider-item">
+            <div class="slider-info">
+              <h2>Derawan Island</h2>
+              <p>East Kalimantan</p>
+              <a href="/pages/derawan-island.html" target="_blank">
+                <button>Visit Now</button>
+              </a>
             </div>
-            <img src="assets/images/img-3.jpg" alt="" />
+            <img src="assets/images/derawan-island.jpg" alt="" />
           </div>
         </div>
-        <div class="buttons">
+        <div class="slider-buttons">
           <button id="prev"><img src="assets/icons/left-arrow.png" alt="" /></button>
           <button id="next"><img src="assets/icons/right-arrow.png" alt="" /></button>
         </div>
-        <ul class="dots">
+        <ul class="slider-dots">
           <li class="active"></li>
           <li></li>
           <li></li>
@@ -72,53 +90,53 @@
       </div>
     </header>
     <main>
-      <article class="main-content-1">
-        <h2 class="main-content-heading-2">Popular Destinations</h2>
+      <article class="main-content" id="mc-1">
+        <h2 class="main-content-heading">Popular Destinations</h2>
         <div class="card-container">
           <div class="card-wrapper">
-            <a href="#" class="card-link">
+            <a href="/pages/jakarta.html" class="card-link" target="_blank">
               <div class="card">
                 <div class="img-content">
-                  <img src="assets/images/img-1.jpg" alt="" />
+                  <img src="assets/images/jakarta.jpg" alt="" />
                 </div>
                 <div class="content">
-                  <p class="heading">Card Hover</p>
+                  <p class="heading">Jakarta</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="card-wrapper">
-            <a href="#" class="card-link">
+            <a href="/pages/surabaya.html" class="card-link" target="_blank">
               <div class="card">
                 <div class="img-content">
-                  <img src="assets/images/img-1.jpg" alt="" />
+                  <img src="assets/images/surabaya.jpg" alt="" />
                 </div>
                 <div class="content">
-                  <p class="heading">Card Hover</p>
+                  <p class="heading">Surabaya</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="card-wrapper">
-            <a href="#" class="card-link">
+            <a href="/pages/yogyakarta.html" class="card-link" target="_blank">
               <div class="card">
                 <div class="img-content">
-                  <img src="assets/images/img-1.jpg" alt="" />
+                  <img src="assets/images/yogyakarta.jpg" alt="" />
                 </div>
                 <div class="content">
-                  <p class="heading">Card Hover</p>
+                  <p class="heading">Yogyakarta</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="card-wrapper">
-            <a href="#" class="card-link">
+            <a href="/pages/bali.html" class="card-link" target="_blank">
               <div class="card">
                 <div class="img-content">
-                  <img src="assets/images/img-1.jpg" alt="" />
+                  <img src="assets/images/bali.jpg" alt="" />
                 </div>
                 <div class="content">
-                  <p class="heading">Card Hover</p>
+                  <p class="heading">Bali</p>
                 </div>
               </div>
             </a>
@@ -126,143 +144,219 @@
         </div>
         <div class="card-container">
           <div class="card-wrapper">
-            <a href="#" class="card-link">
+            <a href="/pages/palembang.html" class="card-link" target="_blank">
               <div class="card">
-                <div class="img-content">
-                  <img src="assets/images/img-1.jpg" alt="" />
+                <div class="img-content highlight">
+                  <img src="assets/images/palembang.jpg" alt="" />
                 </div>
                 <div class="content">
-                  <p class="heading">Card Hover</p>
+                  <p class="heading">Palembang</p>
                 </div>
               </div>
             </a>
           </div>
         </div>
       </article>
-      <article class="main-content-2">
-        <h2 class="main-content-heading-2">Header</h2>
+      <article class="main-content" id="mc-2">
+        <h2 class="main-content-heading">Nusantara Gallery</h2>
         <div class="grid-gallery">
           <div class="card-image img-square-lg">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a class="card-link" href="/pages/mount-bromo.html" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/mount-bromo.jpg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Mount Bromo</label>
+                <p>
+                  Surreal volcano with captivating landscapes and mesmerizing sunrise views.
+                  <br />
+                  East Java.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/baliem-valley.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/baliem-valley.jpeg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Baliem Valley</label>
+                <p>
+                  Cultural trek, breathtaking scenery.
+                  <br />
+                  Highland Papua.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/raja-ampat.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/raja-ampat.jpg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Raja Ampat</label>
+                <p>
+                  Vibrant coral reefs, exotic marine life.
+                  <br />
+                  West Papua.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image img-square-lg">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/tana-toraja.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/tana-toraja.jpg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Tana Toraja</label>
+                <p>
+                  Rich cultural heritage amidst picturesque landscapes and traditional villages.
+                  <br />
+                  South Sulawesi.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/banda-island.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/banda-island.jpg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Banda Island</label>
+                <p>
+                  Historic forts, rich spice trade.
+                  <br />
+                  Central Maluku.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/lake-toba.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/lake-toba.jpg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Lake Toba</label>
+                <p>
+                  Tranquil volcanic lake, scenic beauty.
+                  <br />
+                  North Sumatera.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image img-landscape">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/borobudur-temple.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/borobudur2.jpg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Borobudur Temple</label>
+                <p>
+                  Majestic Buddhist temple with intricate carvings and serene stupas.
+                  <br />
+                  Central Java.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/gili-island.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/gili-island.jpg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Gili Island</label>
+                <p>
+                  White beaches, relaxed atmosphere.
+                  <br />
+                  West Nusa Tenggara.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card-image">
-            <div class="card-img">
-              <img src="assets/images/img-1.jpg" alt="" />
-            </div>
-            <div class="card-details">
-              <label>Title</label>
-              <p>
-                A beautiful place at the shore of XYZ sea.
-                <br />
-                California, USA
-              </p>
-            </div>
+            <a href="/pages/tanjung-puting.html" class="card-link" target="_blank">
+              <div class="card-img">
+                <img src="assets/images/tanjung-puting.jpeg" alt="" />
+              </div>
+              <div class="card-details">
+                <label>Tanjung Puting</label>
+                <p>
+                  Pristine wildlife sanctuary.
+                  <br />
+                  Central Kalimantan.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="main-content" id="mc-3">
+        <h2 class="main-content-heading">Travel Guide</h2>
+        <div class="guide-card-container">
+          <div class="guide-card">
+            <a href="/pages/getting-around.html" class="card-link" target="_blank">
+              <div class="guide-card-image">
+                <p class="guide-card-title">Getting Around</p>
+                <img class="guide-card-img" src="assets/images/mrt-jakarta.jpg" alt="" />
+              </div>
+            </a>
+            <p class="guide-card-description">Discover efficient transportation options for traversing Indonesia's diverse landscapes, whether you're navigating bustling cities or venturing to remote islands.</p>
+          </div>
+          <div class="guide-card">
+            <a href="/pages/cultural-etiquette.html" class="card-link" target="_blank">
+              <div class="guide-card-image">
+                <p class="guide-card-title">Cultural Etiquette</p>
+                <img class="guide-card-img" src="assets/images/culture.jpg" alt="" />
+              </div>
+            </a>
+            <p class="guide-card-description">Explore Indonesia's diverse cultural traditions and customs, from greetings to dining, enhancing your travel experience.</p>
+          </div>
+          <div class="guide-card">
+            <a href="/pages/outdoor-adventure.html" class="card-link" target="_blank">
+              <div class="guide-card-image">
+                <p class="guide-card-title">Outdoor Adventures</p>
+                <img class="guide-card-img" src="assets/images/adventure.jpg" alt="" />
+              </div>
+            </a>
+            <p class="guide-card-description">Experience thrilling outdoor adventures in Indonesia's diverse landscapes, from rainforest trekking to diving into vibrant coral reefs.</p>
           </div>
         </div>
       </article>
     </main>
-    <footer></footer>
+    <footer id="footer">
+      <div class="hero">
+        <div class="hero-logo">
+          <img src="assets/icons/logo.png" alt="" />
+          <div class="hero-logo-socmed">
+            <a href="#"> <img src="assets/icons/github-icon.png" alt="" /> </a>
+            <a href="#"><img src="assets/icons/instagram-icon.png" alt="" /></a>
+            <a href="#"> <img src="assets/icons/linkedin-icon.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="hero-detail">
+          <ul class="hero-detail-list">
+            <li><a href="#" class="hero-detail-paragraph">Home</a></li>
+            <li><a href="#mc-1" class="hero-detail-paragraph">Popular Destinations</a></li>
+            <li><a href="#mc-2" class="hero-detail-paragraph">Nusantara Gallery</a></li>
+            <li><a href="#mc-3" class="hero-detail-paragraph">Travel Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <svg width="100%" height="1" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="1" x2="100%" y2="1" stroke="white" stroke-width="1" />
+      </svg>
+      <div class="copyright">
+        <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
+      </div>
+    </footer>
+    <script src="scripts/navbar.js"></script>
     <script src="scripts/slider.js"></script>
   </body>
 </html>

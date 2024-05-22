@@ -8,8 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
-  background-color: transparent;
+  gap: 2.5em;
   transition: background-color 0.3s ease;
 }
 .navbar img {
@@ -40,4 +39,22 @@
 }
 .navbar li:hover a {
   font-weight: bold;
+}
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .navbar img {
+    height: 30px;
+  }
+}
+/* Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .navbar {
+    height: 40px;
+  }
+  .navbar img {
+    height: 20px;
+  }
+  .navbar ul {
+    display: none;
+  }
 }

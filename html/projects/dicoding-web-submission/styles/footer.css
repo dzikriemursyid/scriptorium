@@ -1,0 +1,56 @@
+.hero {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hero-logo {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-logo > img {
+  width: 8em;
+}
+.hero-logo .hero-logo-socmed {
+  display: flex;
+  gap: 1em;
+}
+.hero-logo .hero-logo-socmed a img {
+  width: 1em;
+}
+.hero-detail .hero-detail-list {
+  display: flex;
+  gap: 0.5em;
+}
+.hero-detail .hero-detail-list li {
+  list-style-type: none;
+}
+.hero-detail .hero-detail-list li a {
+  color: white;
+  font-size: 0.55rem;
+  text-decoration: none;
+}
+.hero-detail .hero-detail-list li a:hover {
+  text-decoration: underline;
+}
+.hero-details p {
+  font-size: inherit;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyright p {
+  font-size: 0.5rem;
+  color: white;
+}
+/* Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .hero {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
