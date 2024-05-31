@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main-header">
+        <h1>Your Library</h1>
+        <div class="add-book">
+          <button id="modalBtn">Add Book+</button>
+        </div>
+      </div>
+      <div class="search">
+        <input placeholder="Search..." type="text" />
+        <button type="submit">Search</button>
+      </div>
+    </header>
+    <nav>
+      <div class="nav-icon">
+        <img src="/assets/icons/navbar-icon.png" alt="" />
+        <h2>Read and Learn</h2>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a href="#" class="nav-link">
+            <img src="/assets/icons/nav-profile.png" alt="" class="nav-list-icon" />
+            <p>Profile</p>
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-link">
+            <img src="/assets/icons/nav-library.png" alt="" class="nav-list-icon" />
+            <p>Library</p>
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-link">
+            <img src="/assets/icons/nav-favorite.png" alt="" class="nav-list-icon" />
+            <p>Favorite</p>
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-link">
+            <img src="/assets/icons/nav-recent.png" alt="" class="nav-list-icon" />
+            <p>Recently Added</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section class="profile">
+        <div class="profile-content">
+          <div class="profile-header">
+            <h2>Hello, Dicoding!</h2>
+            <p>Your achivement this week</p>
+          </div>
+          <div class="profile-desc-container">
+            <ul class="profile-desc">
+              <li class="profile-desc-item">
+                <img src="/assets/icons/profile-total.png" alt="" />
+                <p id="info-all">You have 0 book</p>
+              </li>
+              <li class="profile-desc-item">
+                <img src="/assets/icons/profile-finished.png" alt="" />
+                <p id="info-finished">0 finished book</p>
+              </li>
+            </ul>
+            <ul class="profile-desc">
+              <li class="profile-desc-item">
+                <img src="/assets/icons/profile-reading.png" alt="" />
+                <p id="info-reading">0 reading progress book</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="/assets/icons/books-ilustration.png" alt="" class="profile-ilustration" />
+      </section>
+      <section class="book-container">
+        <div class="book-header">
+          <h2>Your active book</h2>
+          <p>Continue reading where you left off</p>
+        </div>
+        <div class="book-wrapper" id="unfinished-book"></div>
+      </section>
+      <section class="book-container">
+        <div class="book-header">
+          <h2>Finished book</h2>
+          <p>Let's read some book!</p>
+        </div>
+        <div class="book-wrapper" id="finished-book"></div>
+      </section>
+    </main>
+    <aside></aside>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Please fill the book information!</h2>
+        </div>
+        <svg width="100%" height="8" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="5" x2="100%" y2="5" stroke="#fbca1f" stroke-width="2" />
+        </svg>
+        <form class="input-group" id="submitForm">
+          <div class="modal-input">
+            <label for="title">Title</label>
+            <input id="title" placeholder="Title" type="text" class="input" required="" />
+          </div>
+          <div class="modal-input">
+            <label for="author">Author</label>
+            <input id="author" placeholder="Author" type="text" class="input" required="" />
+          </div>
+          <div class="modal-input">
+            <label for="year">Year</label>
+            <input id="year" placeholder="Year" type="number" class="input" required="" />
+          </div>
+          <div class="modal-input">
+            <label for="synopsis">Synopsis</label>
+            <input id="synopsis" placeholder="Synopsis" type="text" class="input" required="" />
+          </div>
+          <button type="submit" id="submitBook">Add book</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/script/main.js"></script>
+  </body>
+</html>

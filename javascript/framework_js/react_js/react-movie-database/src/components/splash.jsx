@@ -12,7 +12,7 @@ const Splash = () => {
   }, []);
 
   const movie = nowPlayingMovies[0];
-  // const bgImage = `${imageUrl}${movie.backdrop_path}`;
+  const bgImage = `${imageUrl}${movie.backdrop_path}`;
 
   return (
     <header>
@@ -44,7 +44,7 @@ const Splash = () => {
           <p className="hero-paragraph"></p>
         </div>
         <div className="hero-img">
-          <img src="" alt="" />
+          <img src={bgImage} alt="" />
         </div>
       </div>
     </header>
