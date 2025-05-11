@@ -1,0 +1,1 @@
+add to file /home/dzikrie/Documents/text-renamed.txt content: Testing node for server environment but overwrite!
